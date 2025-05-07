@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulir Pendaftaran Siswa Baru</title>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #00ffff;
+		padding: 30px;
+	}
+
+	h1 {
+		text-align: center;
+		color: #333;
+	}
+	form{
+		background-color: #DEF887;
+		max-width: 700px;
+		margin: auto;
+		padding: 25px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	label{
+		display: block;
+		margin-top: 15px;
+		font-weight: bold;
+	}
+	input[type="text"], input[type="email"], input[type="password"], select, textarea{
+		width: 100%;
+		padding: 10px;
+		margin-top: 5px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-sizing: border-box;
+	}
+	input[type="radio"], input[type="checkbox"]{
+		margin-right: 8px;
+	}
+	.form-group {
+		margin-top: 10px;
+	}
+	input[type="submit"]{
+		background-color: #007bff;
+		color: white;
+		border: none;
+		padding: 12px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		margin-top: 20px;
+		border-radius: 5px;
+	}
+	input[type="submit"]:hover {
+		background-color: #0056b3;
+	}
+</style>
+</head>
+<body>
+	<h1>Formulir Pendaftaran Siswa Baru</h1>
+	<form action="#" method="post">
+		<label for="nama">Nama Lengkap:</label>
+		<input type="text" id="nama" name="nama" required>
+
+		<label for="nisn">Nisn:</label>
+		<input type="nisn" id="nisn" name="nisn" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+	<label>Jenis Kelamin:</label>
+	<input type="radio" name="gender" value="Laki-Laki" required>Laki-Laki
+	<input type="radio" name="gender" value="Perempuan" required>Perempuan
+
+	<label for="alsmst">Alamat Lengkap</label>
+	<textarea id="Alamat" name="alamat" rows="4" required></textarea>
+
+	<label for="jurusan">Pilihan Jurusan</label>
+	<select name="jurusan" id="jurusan" required>
+		<option value="">--Pilih Jurusan--</option>
+		<option value="TKJ">Teknik Komputer dan Jaringan</option>
+		<option value="AKL">Akutansi Dan Keuangan</option>
+		<option value="TB">Tata Busana</option>
+		<option value="MPLB">Manajemen Perkantoran</option>
+		<option value="BDP">Bisnis Daring dan Pemasaran</option>
+	</select>
+
+	<label>Hobi</label>
+	<input type="checkbox" name="hobi" value="Membaca">membaca
+	<input type="checkbox" name="hobi" value="Olahraga">Olahraga
+	<input type="checkbox" name="hobi" value="Sepak Bola">Sepak Bola
+	<input type="checkbox" name="hobi" value="Takraw">Takraw
+
+	<label for="Motivasi">Motivasi Mendaftar:</label>
+	<textarea id="Motivasi" name="Motivasi" rows="4"></textarea>
+
+	<input type="Submit" value="Daftar">
+	</form>
+
+</body>
+</html>
