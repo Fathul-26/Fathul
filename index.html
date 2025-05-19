@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda dan Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="beranda.css">
+    <style>/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4a6d7c; /* Warna header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #f2c94c;
+}
+
+/* Beranda Section */
+.beranda {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.beranda h2 {
+    font-size: 32px;
+    color: #4a6d7c;
+}
+
+.beranda p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #555;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.beranda .tombol {
+    display: inline-block;
+    background-color: #f2c94c;
+    color: #333;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.beranda .tombol:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profil Section */
+.profil {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.profil h2 {
+    font-size: 32px;
+    color: #4a6d7c;
+}
+
+.profil p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.profil .tombol-berikutnya {
+    background-color: #4a6d7c;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.profil .tombol-berikutnya:hover {
+    background-color: #3b5563;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #4a6d7c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .beranda h2, .profil h2 {
+        font-size: 28px;
+    }
+
+    .beranda p, .profil p {
+        font-size: 16px;
+    }
+
+    .beranda .tombol, .profil .tombol-berikutnya {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Selamat Datang di Portofolio Fathul</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Beranda Section -->
+    <section class="beranda">
+        <div class="container">
+            <h2>Hallo, Saya Fathul Mu'min Muhlis</h2>
+            <p>Saya seorang pelajar dari SMKN 1 BANTAENG dengan jurusan TKJ dan ingin menjadi sebagai seorang Web Developer, hobi saya main game. Di halaman ini, Anda bisa mengetahui lebih lanjut tentang saya dan perjalanan karier saya. Selamat menjelajahi!</p>
+            <a href="portofolio.html" class="tombol">Lihat Portofolio</a>
+        </div>
+    </section>
+
+    <!-- Profil Section -->
+    <section class="profil">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya lahir dan besar di Sulawesi Selatan Bantaeng. Sejak kecil, saya tertarik dengan teknologi. Pengalaman saya dalam  HTML, CSS, dan JavaScript telah mengarahkan saya untuk terus belajar dan berkembang dalam bidang ini.</p>
+            <a href="portofolio.html" class="tombol tombol-berikutnya">Lihat Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Portofolio Saya. Semua hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
