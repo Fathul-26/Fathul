@@ -1,206 +1,104 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda dan Profil</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="beranda.css">
-    <style>/* Reset dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda</title>
+  <style>
+      /* Gaya umum */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
-/* Header */
-header {
-    background-color: #4a6d7c; /* Warna header */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+/* Kontainer konten */
+.container {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+/* Judul */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.8em;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* Paragraf deskripsi */
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Navigasi */
+nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  background: #00bcd4;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-weight: bold;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    transition: all 0.3s ease;
+nav a:hover {
+  background: #0097a7;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    color: #f2c94c;
+/* Efek hujan */
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  top: -20px;
+  animation: fall linear infinite;
+  z-index: 0;
 }
 
-/* Beranda Section */
-.beranda {
-    background-color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-    margin-top: 40px;
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
-.beranda h2 {
-    font-size: 32px;
-    color: #4a6d7c;
-}
-
-.beranda p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #555;
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-.beranda .tombol {
-    display: inline-block;
-    background-color: #f2c94c;
-    color: #333;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-}
-
-.beranda .tombol:hover {
-    background-color: #e0a800;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Profil Section */
-.profil {
-    background-color: #f4f4f4;
-    padding: 80px 20px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.profil h2 {
-    font-size: 32px;
-    color: #4a6d7c;
-}
-
-.profil p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #555;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.profil .tombol-berikutnya {
-    background-color: #4a6d7c;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-}
-
-.profil .tombol-berikutnya:hover {
-    background-color: #3b5563;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-    background-color: #4a6d7c;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Responsif untuk perangkat mobile */
-@media (max-width: 768px) {
-    .beranda h2, .profil h2 {
-        font-size: 28px;
-    }
-
-    .beranda p, .profil p {
-        font-size: 16px;
-    }
-
-    .beranda .tombol, .profil .tombol-berikutnya {
-        padding: 10px 25px;
-        font-size: 16px;
-    }
-}
-</style>
+  </style>
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Selamat Datang di Portofolio Fathul</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="portofolio.html">Portofolio</a></li>
-                    <li><a href="galeri.html">Galeri</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Beranda Section -->
-    <section class="beranda">
-        <div class="container">
-            <h2>Hallo, Saya Fathul Mu'min Muhlis</h2>
-            <p>Saya seorang pelajar dari SMKN 1 BANTAENG dengan jurusan TKJ dan ingin menjadi sebagai seorang Web Developer, hobi saya main game. Di halaman ini, Anda bisa mengetahui lebih lanjut tentang saya dan perjalanan karier saya. Selamat menjelajahi!</p>
-            <a href="portofolio.html" class="tombol">Lihat Portofolio</a>
-        </div>
-    </section>
-
-    <!-- Profil Section -->
-    <section class="profil">
-        <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Saya lahir dan besar di Sulawesi Selatan Bantaeng. Sejak kecil, saya tertarik dengan teknologi. Pengalaman saya dalam  HTML, CSS, dan JavaScript telah mengarahkan saya untuk terus belajar dan berkembang dalam bidang ini.</p>
-            <a href="portofolio.html" class="tombol tombol-berikutnya">Lihat Lebih Lanjut</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Portofolio Saya. Semua hak cipta dilindungi.</p>
-    </footer>
-
+  <div class="container">
+    <h1>Selamat Datang di Website Fathul</h1>
+    <p>Website ini bertema visual hujan yang tenang dan estetik karena saya menyukai suasana hujan.</p>
+    <nav>
+      <a href="profil.html">Profil</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+  const jumlahTetes = 150;
+  for (let i = 0; i < jumlahTetes; i++) {
+    const tetes = document.createElement("div");
+    tetes.className = "raindrop";
+    tetes.style.left = `${Math.random() * 100}vw`;
+    tetes.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+    tetes.style.animationDelay = `${Math.random() * 5}s`;
+    document.body.appendChild(tetes);
+  }
+});
+</script>
 </body>
 </html>
+
