@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda</title>
+  <style>
+      /* Gaya umum */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Kontainer konten */
+.container {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Judul */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.8em;
+}
+
+/* Paragraf deskripsi */
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Navigasi */
+nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  background: #00bcd4;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: #0097a7;
+}
+
+/* Efek hujan */
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  top: -20px;
+  animation: fall linear infinite;
+  z-index: 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Datang di Website Fathul</h1>
+    <p>Website ini bertema visual hujan yang tenang dan estetik karena saya menyukai suasana hujan.</p>
+    <nav>
+      <a href="profil.html">Profil</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+  const jumlahTetes = 150;
+  for (let i = 0; i < jumlahTetes; i++) {
+    const tetes = document.createElement("div");
+    tetes.className = "raindrop";
+    tetes.style.left = `${Math.random() * 100}vw`;
+    tetes.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+    tetes.style.animationDelay = `${Math.random() * 5}s`;
+    document.body.appendChild(tetes);
+  }
+});
+</script>
+</body>
+</html>
